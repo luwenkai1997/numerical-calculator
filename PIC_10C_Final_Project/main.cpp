@@ -3,6 +3,7 @@
 #include <cmath>
 #include <vector>
 #include "solve_eq.h"
+#include "interpolation.h"
 #include "calculus.h"
 
 
@@ -13,7 +14,7 @@ int main() {
     std::cout << "Welcome to use Wenkai's calculator! \n";
     std::cout << "Here are the functions of this calculator: \n\n";
     std::cout << "1. Solving Polynomial Equations in R \n";
-    std::cout << "2. Interpolation of Data \n";
+    std::cout << "2. Interpolation of (x,y) Data \n";
     std::cout << "3. Estimating Derivaticves \n";
     std::cout << "4. Integtation of Data \n\n";
     std::cout << "Please enter the function you want to use: ";
@@ -24,6 +25,7 @@ int main() {
         std::cout << "Invalid input! Please enter 1, 2, 3, 4: ";
         std::cin >> mode;
     }
+    
     
     
     // Function 1: Solving Polynomial Equations in R
@@ -75,7 +77,33 @@ int main() {
         }
     }
     
-    // Function 2: Interpolation of Data
+    
+    
+    // Function 2: Interpolation of (x,y) Data
+    if (mode == 2) {
+        int n = 0; // number of data points
+        std::cout << "Welcome to interpolation of data! \n";
+        std::cout << "How many data point do you have? (up to 5) ";
+        std::cin >> n;
+        std::vector<double> x(n);
+        std::vector<double> y(n);
+        std::cout << "Now, please enter the data points following instructions. \n";
+        
+        for (int i = 0; i < n; ++i) {
+            std::cout << "Value of x_" << i << ": ";
+            std::cin >> x[i];
+            std::cout << "Value of y_" << i << ": ";
+            std::cin >> y[i];
+        }
+        
+        double t = 0;
+        std::cout << "At which x do you want to estimate the value of y? ";
+        std::cin >> t;
+        
+        std::cout << "Via Lanrange polynomial, the estimated value of the function y(x) at x = " << t << " is: " << langange(t, x, y) << " \n\n";
+        
+        return 0;
+    }
     
     
     
