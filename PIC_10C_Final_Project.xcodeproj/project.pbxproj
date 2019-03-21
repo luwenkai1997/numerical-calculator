@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		D5281EFC22431574009F132F /* PIC_10C_Final_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PIC_10C_Final_Project; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5281EFF22431574009F132F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D5281F0722431729009F132F /* solve_eq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solve_eq.h; sourceTree = "<group>"; };
+		D5281F09224317C8009F132F /* calculus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculus.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				D5281EFF22431574009F132F /* main.cpp */,
+				D5281F09224317C8009F132F /* calculus.h */,
+				D5281F0722431729009F132F /* solve_eq.h */,
 			);
 			path = PIC_10C_Final_Project;
 			sourceTree = "<group>";
