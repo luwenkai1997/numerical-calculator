@@ -60,8 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				D5281EFF22431574009F132F /* main.cpp */,
-				D5281F09224317C8009F132F /* calculus.h */,
 				D5281F0722431729009F132F /* solve_eq.h */,
+				D5281F09224317C8009F132F /* calculus.h */,
 			);
 			path = PIC_10C_Final_Project;
 			sourceTree = "<group>";
