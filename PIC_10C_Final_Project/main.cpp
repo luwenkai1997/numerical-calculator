@@ -59,8 +59,26 @@ int main() {
         }
         
         // if this function has degree higher 3 or 4...
-        
+        if (n > 2) {
+            double upperbound;
+            double lowerbound;
+            std::cout << "Please enter the upper and lower bound of the root.\n";
+            std::cout << "Make sure the polynomial has different signs at the boundaries.\n";
+            std::cout << "Upper bound of the root: ";
+            std::cin >> upperbound;
+            std::cout << "Lower bound of the root: ";
+            std::cin >> lowerbound;
+            double root = bisection(coeff, lowerbound, upperbound);
+            std::cout << "\nOne root of this equation is " << std::setprecision(3) << root << "\n";
+            std::cout << "This might not the only root of this equation. \n\n";
+            return 0;
+        }
     }
+    
+    // Function 2: Interpolation of Data
+    
+    
+    
     
     
     
