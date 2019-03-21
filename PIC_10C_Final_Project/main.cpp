@@ -88,6 +88,7 @@ int main() {
         std::vector<double> x(n);
         std::vector<double> y(n);
         std::cout << "Now, please enter the data points following instructions. \n";
+        
         for (int i = 0; i < n; ++i) {
             std::cout << "Value of x_" << i << ": ";
             std::cin >> x[i];
@@ -95,10 +96,13 @@ int main() {
             std::cin >> y[i];
         }
         
+        double t = 0;
+        std::cout << "At which x do you want to estimate the value of y? ";
+        std::cin >> t;
         
-
+        std::cout << "Via Lanrange polynomial, the estimated value of the function y(x) at x = " << t << " is: " << langange(t, x, y) << " \n\n";
         
-        
+        return 0;
     }
     
     
