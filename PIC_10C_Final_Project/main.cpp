@@ -3,6 +3,7 @@
 #include <cmath>
 #include <vector>
 #include "solve_eq.h"
+#include "interpolation.h"
 #include "calculus.h"
 
 
@@ -82,7 +83,7 @@ int main() {
     if (mode == 2) {
         int n = 0; // number of data points
         std::cout << "Welcome to interpolation of data! \n";
-        std::cout << "How many data point do you have? ";
+        std::cout << "How many data point do you have? (up to 5) ";
         std::cin >> n;
         std::vector<double> x(n);
         std::vector<double> y(n);
@@ -93,6 +94,7 @@ int main() {
             std::cout << "Value of y_" << i << ": ";
             std::cin >> y[i];
         }
+        
         
 
         

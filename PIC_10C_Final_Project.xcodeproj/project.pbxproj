@@ -27,6 +27,7 @@
 		D5281EFF22431574009F132F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D5281F0722431729009F132F /* solve_eq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solve_eq.h; sourceTree = "<group>"; };
 		D5281F09224317C8009F132F /* calculus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculus.h; sourceTree = "<group>"; };
+		D5281F0A22433C41009F132F /* interpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interpolation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			children = (
 				D5281EFF22431574009F132F /* main.cpp */,
 				D5281F0722431729009F132F /* solve_eq.h */,
+				D5281F0A22433C41009F132F /* interpolation.h */,
 				D5281F09224317C8009F132F /* calculus.h */,
 			);
 			path = PIC_10C_Final_Project;
