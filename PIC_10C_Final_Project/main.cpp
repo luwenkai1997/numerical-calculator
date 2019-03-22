@@ -21,7 +21,7 @@ int main() {
     std::cin >> mode;
     
     // check whether the input is valid
-    while (mode != 1 && mode != 2 && mode && 3 && mode != 4) {
+    while (mode != 1 && mode != 2 && mode != 3 && mode != 4) {
         std::cout << "Invalid input! Please enter 1, 2, 3, 4: ";
         std::cin >> mode;
     }
@@ -104,8 +104,36 @@ int main() {
         
         return 0;
     }
+
     
     
+    // Function 3: Estimating Derivaticves
+    if (mode == 3) {
+        int n = 0;
+        std::cout << "Welcome to estimating derivaticves! \n";
+        std::cout << "How many data point do you have? (up to 5) ";
+        std::cin >> n;
+        std::vector<double> x(n);
+        std::vector<double> y(n);
+        std::cout << "Now, please enter the data points following instructions. \n";
+        
+        for (int i = 0; i < n; ++i) {
+            std::cout << "Value of x_" << i << ": ";
+            std::cin >> x[i];
+            std::cout << "Value of y_" << i << ": ";
+            std::cin >> y[i];
+        }
+        
+        double t = 0;
+        std::cout << "At which x do you want to estimate the derivative of y? ";
+        std::cin >> t;
+        
+        std::cout << "The estimated derivative of the function y(x) at x = " << t << " is: " << differentiate(t, x, y) << " \n";
+        std::cout << "The estimation may have error depending on the data. \n\n";
+        
+        return 0;
+        
+    }
     
     
     
