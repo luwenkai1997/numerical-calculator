@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cmath>
 #include <vector>
+#include <fstream>
 #include "solve_eq.h"
 #include "interpolation.h"
 #include "calculus.h"
@@ -51,12 +52,43 @@ int main() {
         // if this function has degree 1...
         if (n == 1) {
             std::cout << "The root of this function is " << -1 * coeff[0] / coeff[1] << "\n\n";
+            
+            //print out the results
+            std::ofstream fout;
+            fout.open("log");
+            fout << "-------------------------------- \n\n";
+            fout << "Your equation is: \n";
+            fout << coeff[0] << " + " << coeff[1] << "*x = 0 \n";
+            fout << "The root is: \n";
+            fout << "x = " << -1 * coeff[0] / coeff[1] << "\n\n";
+            fout << "-------------------------------- \n\n";
+            fout.close();
+            
             return 0;
         }
         
         // if this function has degree 2...
         if (n == 2) {
+            double delta = pow(coeff[1],2) - 4 * coeff[0] * coeff[2];
+            if (delta < 0) {
+                std::cout << "No real root! \n";
+                return 0;
+            }
+            double x1 = (-1 * coeff[1] + sqrt(delta)) / (2 * coeff[2]);
+            double x2 = (-1 * coeff[1] - sqrt(delta)) / (2 * coeff[2]);
             solve_quadratic_eq(coeff);
+            
+            //print out the results
+            std::ofstream fout;
+            fout.open("log");
+            fout << "-------------------------------- \n\n";
+            fout << "Your equation is: \n\n";
+            fout << coeff[0] << " + " << coeff[1] << "*x + " << coeff[2] << "*x^2 = 0 \n\n";
+            fout << "The roots are: \n";
+            fout << "x_1 = " << x1 << ", x_2 = " << x2 << "\n\n";
+            fout << "-------------------------------- \n\n";
+            fout.close();
+            
             return 0;
         }
         
@@ -73,6 +105,25 @@ int main() {
             double root = bisection(coeff, lowerbound, upperbound);
             std::cout << "\nOne root of this equation is " << std::setprecision(3) << root << "\n";
             std::cout << "This might not the only root of this equation. \n\n";
+            
+            //print out the results
+            std::ofstream fout;
+            fout.open("log");
+            fout << "-------------------------------- \n\n";
+            fout << "Your equation is: \n\n";
+            if (n == 3) {
+                fout << coeff[0] << " + " << coeff[1] << "*x + " << coeff[2] << "*x^2 + " << coeff[3] << "*x^3 = 0 \n\n";
+            }
+            else
+                fout << coeff[0] << " + " << coeff[1] << "*x + " << coeff[2] << "*x^2 + " << coeff[3] << "*x^3 + " << coeff[4] << "*x^4 = 0 \n\n";
+            fout << "Lower bound of the root: " << lowerbound << "\n";
+            fout << "Upper bound of the root: " << upperbound << "\n\n";
+            fout << "The root is: \n";
+            fout << "x = " << root << "\n\n";
+            fout << "This might not the only root of this equation. \n\n";
+            fout << "-------------------------------- \n\n";
+            fout.close();
+            
             return 0;
         }
     }
