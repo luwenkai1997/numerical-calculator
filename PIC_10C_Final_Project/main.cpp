@@ -136,6 +136,27 @@ int main() {
     }
     
     
+    // Function 4: Integtation of Data
+    if (mode == 4) {
+        int n = 0;
+        std::cout << "Welcome to integration of data! \n";
+        std::cout << "How many data point do you have? (up to 5) ";
+        std::cin >> n;
+        std::vector<double> x(n);
+        std::vector<double> y(n);
+        std::cout << "Now, please enter the data points following instructions. \n";
+        
+        for (int i = 0; i < n; ++i) {
+            std::cout << "Value of x_" << i << ": ";
+            std::cin >> x[i];
+            std::cout << "Value of y_" << i << ": ";
+            std::cin >> y[i];
+        }
+        
+        
+        
+    }
+    
     
     
     
