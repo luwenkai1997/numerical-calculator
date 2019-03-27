@@ -153,6 +153,20 @@ int main() {
         
         std::cout << "Via Lanrange polynomial, the estimated value of the function y(x) at x = " << t << " is: " << langange(t, x, y) << " \n\n";
         
+        //print out the results
+        std::ofstream fout;
+        fout.open("log");
+        fout << "-------------------------------- \n\n";
+        fout << "The data points (x,y) are: \n";
+        for (int i = 0; i < n; ++i) {
+            fout << "    (" << x[i] << "," << y[i] << ") \n";
+        }
+        fout << "\n";
+        fout << "The estimated value of the function y(x) at x = " << t << " is: " << langange(t, x, y) << " \n\n";
+        fout << "-------------------------------- \n\n";
+        fout.close();
+        
+        
         return 0;
     }
 
