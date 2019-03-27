@@ -39,3 +39,9 @@ Function 2 can help to aprroximate the value of a function through [Lagrange Pol
 Function 3 can help to estimate the derivative of a function with at most 5 data points. The approximation might not be accurate when the data size is small or the x data are very close to 0. 
 
 [test case of y(x)=x^2 with 5 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_5)
+
+## Function 4: Integration of Data
+
+Function 4 can help to estimate the integral of an unknown function y(x) with up to 10 (x,y) data points. This approximation is done by [Composite Numerical Integration](https://www3.nd.edu/~zxu2/acms40390F15/Lec-4.4.pdf). The approximation might not be accurate when the data size is small or the x data are large in absolute values.
+
+[test case of y(x)=x with 6 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_6)
