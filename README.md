@@ -32,3 +32,5 @@ For functions with degree 3 or higher, we will only get 1 root through [bisectio
 
 Function 2 can help to aprroximate the value of a function through [Lagrange Polynomials](https://en.wikipedia.org/wiki/Lagrange_polynomial). 
 
+[test case of y(x)=x^2+1 with 3 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_4)
+
