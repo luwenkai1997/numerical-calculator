@@ -219,11 +219,12 @@ int main() {
     if (mode == 4) {
         int n = 0;
         std::cout << "Welcome to integration of data! \n";
-        std::cout << "How many data point do you have? (up to 5) ";
+        std::cout << "How many data point do you have? (up to 10) ";
         std::cin >> n;
         std::vector<double> x(n);
         std::vector<double> y(n);
         std::cout << "Now, please enter the data points following instructions. \n";
+        std::cout << "The x data must seperate the domain into n equal intervals! \n";
         
         for (int i = 0; i < n; ++i) {
             std::cout << "Value of x_" << i << ": ";
@@ -232,7 +233,8 @@ int main() {
             std::cin >> y[i];
         }
         
-        
+        std::cout << "The estimated integral of the function y(x) is: " << composite(x, y, n) << " \n";
+        std::cout << "The estimation may have error depending on the data. \n\n";
         
     }
     
