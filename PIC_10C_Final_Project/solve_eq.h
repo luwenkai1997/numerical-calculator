@@ -7,16 +7,22 @@
 #include <iomanip>
 
 // Solve polynomial equations with degree 2
-void solve_quadratic_eq(const std::vector<double>& coeff);
+template <typename T>
+void solve_quadratic_eq(const std::vector<T>& coeff);
 
 // Solve polynomial equation with degree > 2 via Bisection method
-double bisection(const std::vector<double>& coeff, const double& l, const double& u);
+template <typename T>
+T bisection(const std::vector<T>& coeff, const T& l, const T& u);
 
 // Compute the value of polynomial
-double value(const double& x, const std::vector<double>& coeff);
+template <typename T>
+T value(const T& x, const std::vector<T>& coeff);
 
 
-void solve_quadratic_eq(const std::vector<double>& coeff) {
+
+
+template <typename T>
+void solve_quadratic_eq(const std::vector<T>& coeff) {
     std::cout << std::fixed;
     std::cout << std::setprecision(3);
     double delta = pow(coeff[1],2) - 4 * coeff[0] * coeff[2];
@@ -25,11 +31,11 @@ void solve_quadratic_eq(const std::vector<double>& coeff) {
     std::cout << "The roots of this equation are " << x1 << " and " << x2 << "\n\n";
 }
 
-
-double bisection(const std::vector<double>& coeff, const double& l, const double& u) {
-    std::vector<double> x(50);
-    std::vector<double> a(50);
-    std::vector<double> b(50);
+template <typename T>
+T bisection(const std::vector<T>& coeff, const T& l, const T& u) {
+    std::vector<T> x(50);
+    std::vector<T> a(50);
+    std::vector<T> b(50);
     x[0] = 0.5 * (l + u);
     a[0] = l;
     b[0] = u;
@@ -52,9 +58,9 @@ double bisection(const std::vector<double>& coeff, const double& l, const double
     
 }
 
-
-double value(const double& x, const std::vector<double>& coeff) {
-    double output = 0;
+template <typename T>
+T value(const T& x, const std::vector<T>& coeff) {
+    T output = 0;
     for (int i = 0; i < coeff.size(); ++i) {
         output += coeff[i] * pow(x,i);
     }
