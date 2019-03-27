@@ -3,26 +3,31 @@
 #include "interpolation.h"
 
 // Estimate derivative at t through Lagrange Polynomials
-double differentiate(const double& t, const std::vector<double>& x, const std::vector<double>& y);
+template <typename T>
+T differentiate(const T& t, const std::vector<T>& x, const std::vector<T>& y);
 
-double composite(const std::vector<double>& x, const std::vector<double>& y, int n);
+// Estimate the intehral of y(x) through Composite Numerical Integration
+template <typename T>
+T composite(const std::vector<T>& x, const std::vector<T>& y, int n);
 
 
 
-double differentiate(const double& t, const std::vector<double>& x, const std::vector<double>& y) {
-    double h = 0.5;
-    double lhs = langange(t-h, x, y);
-    double rhs = langange(t+h, x, y);
-    double derivative = (rhs-lhs) / (2*h);
+template <typename T>
+T differentiate(const T& t, const std::vector<T>& x, const std::vector<T>& y) {
+    T h = 0.5;
+    T lhs = langange(t-h, x, y);
+    T rhs = langange(t+h, x, y);
+    T derivative = (rhs-lhs) / (2*h);
     return derivative;
 }
 
 
-double composite(const std::vector<double>& x, const std::vector<double>& y, int n) {
-    double a = x[0];
-    double b = x[n-1];
-    double h = (b-a)/n;
-    double integral = 0;
+template <typename T>
+T composite(const std::vector<T>& x, const std::vector<T>& y, int n) {
+    T a = x[0];
+    T b = x[n-1];
+    T h = (b-a)/n;
+    T integral = 0;
     
     for (int i = 0; i < n; ++i) {
         if (i == 0) {

@@ -7,17 +7,19 @@
 #include <vector>
 
 // interpolation via Lagrange Polynomials
-double langange(const int& t, const std::vector<double>& x, const std::vector<double>& y);
+template <typename T>
+T langange(const T& t, const std::vector<T>& x, const std::vector<T>& y);
 
 
 
-double langange(const int& t, const std::vector<double>& x, const std::vector<double>& y) {
-    double output = 0;
-    std::vector<double> L(x.size());
+template <typename T>
+T langange(const T& t, const std::vector<T>& x, const std::vector<T>& y) {
+    T output = 0;
+    std::vector<T> L(x.size());
     
     for (int i = 0; i < x.size(); ++i) {
-        double numerator = 1;
-        double denominator = 1;
+        T numerator = 1;
+        T denominator = 1;
         
         for (int j = 0; j < x.size(); ++j) {
             if (i != j) {
