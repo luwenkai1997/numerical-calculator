@@ -2,6 +2,10 @@
 
 ![](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/title_picture.jpg)
 
+## Background
+
+This quarter, I took MATH 151A: Numerical Methods, and learned several ways to solve different math problems. I realized that solving real-life math problems with numerical methods is very different from solving problems with algebraic or analysis tools, so I decided to write these numerical methods in C++ codes to get a useful tool for future use. 
+
 ## Introduction
 
 This project can help to solve some basic mathematical problems using numerical methods. It has four funcitons: 
@@ -13,6 +17,8 @@ This project can help to solve some basic mathematical problems using numerical 
 3. Estimating Derivaticves
 
 4. Integtation of Data
+
+For each function, the data and results will be written into a file "log.txt". 
 
 ## Function 1: Solving Polynomial Equations in R
 
@@ -45,3 +51,8 @@ Function 3 can help to estimate the derivative of a function with at most 5 data
 Function 4 can help to estimate the integral of an unknown function y(x) with up to 10 (x,y) data points. This approximation is done by [Composite Numerical Integration](https://www3.nd.edu/~zxu2/acms40390F15/Lec-4.4.pdf). The approximation might not be accurate when the data size is small or the x data are large in absolute values.
 
 [test case of y(x)=x with 6 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_6)
+
+## Reference
+
+Numerical Analysis (10th edition) by Richard L. Burden, J. Douglas Faires, and Annette M. Burden. 
+
