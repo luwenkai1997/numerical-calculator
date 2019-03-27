@@ -34,3 +34,8 @@ Function 2 can help to aprroximate the value of a function through [Lagrange Pol
 
 [test case of y(x)=x^2+1 with 3 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_4)
 
+## Function 3: Estimating Derivaticves
+
+Function 3 can help to estimate the derivative of a function with at most 5 data points. The approximation might not be accurate when the data size is small or the x data are very close to 0. 
+
+[test case of y(x)=x^2 with 5 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_5)
