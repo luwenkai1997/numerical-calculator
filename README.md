@@ -52,6 +52,11 @@ Function 4 can help to estimate the integral of an unknown function y(x) with up
 
 [test case of y(x)=x with 6 data points](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/test_case/test_case_6)
 
+## Challenges I Meet
+
+1. I'm not sure whether I should use template to allow for different types of input. 
+
+
 ## Reference
 
 Numerical Analysis (10th edition) by Richard L. Burden, J. Douglas Faires, and Annette M. Burden. 
