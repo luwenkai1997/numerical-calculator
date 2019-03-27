@@ -236,9 +236,20 @@ int main() {
         std::cout << "The estimated integral of the function y(x) is: " << composite(x, y, n) << " \n";
         std::cout << "The estimation may have error depending on the data. \n\n";
         
+        //print out the results
+        std::ofstream fout;
+        fout.open("log");
+        fout << "-------------------------------- \n\n";
+        fout << "The data points (x,y) are: \n";
+        for (int i = 0; i < n; ++i) {
+            fout << "    (" << x[i] << "," << y[i] << ") \n";
+        }
+        fout << "\n";
+        fout << "The estimated integral of the function y(x) is: " << composite(x, y, n) << " \n";
+        fout << "-------------------------------- \n\n";
+        fout.close();
+        
     }
-    
-    
     
     
     
