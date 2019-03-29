@@ -56,6 +56,11 @@ Function 4 can help to estimate the integral of an unknown function y(x) with up
 
 1. I'm not sure whether I should use template to allow for different types of input. 
 
+I try to use template in the header files so that the users can use various types of inputs for the coefficients, but at the same time I realize that no matter which type of input we use, the output of the program (e.g. roots of an equation or estimate of the derivative) will always be in the type of double, so template is not necessary in this program. 
+
+2. How to calculate the coefficients in Lagrange Polynomials.
+
+To get the coefficients in Lagrange Polynomial, I use several for-loops to calculate in the header file, which looks ugly. I try to use iterators for make the code look better, but eventually I don't see a big difference since the structure of input is quite simple. Therefore, I choose to use for-loop. 
 
 ## Reference
 
