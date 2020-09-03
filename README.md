@@ -1,6 +1,6 @@
 # Final Project: Numerical Calculator 
 
-![](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/title_picture.jpg)
+![title picture](https://github.com/luwenkai1997/pic-10c-final-project/blob/master/title_picture.jpg)
 
 ## Background
 
