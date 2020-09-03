@@ -10,7 +10,7 @@ This quarter, I took MATH 151A: Numerical Methods, and learned several ways to s
 
 This project can help to solve some basic mathematical problems using numerical methods. It has four funcitons: 
 
-1. Solving Polynomial Equations in R
+1. Solving Polynomial Equations in $x=2$
 
 2. Interpolation of (x,y) Data
 
